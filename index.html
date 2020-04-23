@@ -10,19 +10,86 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 </head>
 <body>
-    <div class="slide-activate">
-        <div class="card-img" id="img01"></div>
-        <div class="card-content">
-            <p class="card-theme">Travel</p>
-            <h2 class="card-header"> Amongst the giants</h2>
-            <p class="card-para">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Magnam impedit totam corrupti tempore nesciunt nihil voluptatibus 
-                animi! Odit quae temporibus cumque odio accusamus 
-                facilis possimus quam qui obcaecati, aliquid ipsam.
-            </p>
-            <a href="#" class="card-link">Read</a>
+    <div class="slide active">
+        <div class="card">
+            <div class="card-img" id="img01"></div>
+            <div class="card-content">
+                <p class="card-theme">Travel</p>
+                <h2 class="card-header"> Amongst the giants</h2>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Magnam impedit totam corrupti tempore nesciunt nihil voluptatibus 
+                    animi! Odit quae temporibus cumque odio accusamus 
+                    facilis possimus quam qui obcaecati, aliquid ipsam.
+                </p>
+                <a href="#" class="card-link">Read</a>
+            </div>
         </div>
     </div>
+
+    <div class="slide">
+        <div class="card">
+            <div class="card-img" id="img02"></div>
+            <div class="card-content">
+                <p class="card-theme">Travel</p>
+                <h2 class="card-header">Home Outdoors</h2>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Magnam impedit totam corrupti tempore nesciunt nihil voluptatibus 
+                    animi! Odit quae temporibus cumque odio accusamus 
+                    facilis possimus quam qui obcaecati, aliquid ipsam.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="card">
+            <div class="card-img" id="img03"></div>
+            <div class="card-content">
+                <p class="card-theme">travel</p>
+                <h2 class="card-header">A Mystic Walk</h2>
+                <p class="card-para">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Magnam impedit totam corrupti tempore nesciunt nihil voluptatibus 
+                    animi! Odit quae temporibus cumque odio accusamus 
+                    facilis possimus quam qui obcaecati, aliquid ipsam.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="prevnext">
+        <button class="pn-btn" id="prev"></button>
+        <button class="pn-btn" id="next"></button>
+    </div>
+
+    <script type="text/javascript">
+        
+        var $activeSlide = $('.active'),
+        $homeSlide = ('.slide'),
+        $slideNavPrev = $('#prev'),
+        $slideNavNext = $('#next');
+
+        function init(){
+            TweenMax.set($homeSlide.not($activeSlide), {autoAlpha : 0});
+            TweenMax.set($slideNavPrev, {autoAlpha : 0.4});
+        }
+
+        init();
+
+        function goToNextSlide(slideOut, slideIn, slideInAll) {
+            var t1 = new TimelineLite(),
+            slideOutContent = slideOut.find('card-content'),
+            slideInContent = slideIn.find('.card-content'),
+            slideOutImg = slideOut.find('.card-img'),
+            slideInImg = slideIn.find('.card-img'),
+            index = slideIn.index(),
+            size = $homeSlide.length;
+
+            if(slideIn.)
+        }
+    </script>
+
 </body>
 </html>
