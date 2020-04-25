@@ -116,6 +116,35 @@ body{
     font-size: 20px;
 }
 
+#prev, #next {
+    position: relative;
+    cursor: pointer;
+}
+
 #prev:focus, #next:focus {
     outline: none;
+}
+
+#prev:hover:after, #next:hover:after {
+    opacity: 1;
+}
+
+#prev:after, #next:hover:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+#prev:after {
+    content: "↑"
+}
+
+#next:after {
+    content: "↓"
 }
